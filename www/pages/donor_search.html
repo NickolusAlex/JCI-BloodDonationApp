@@ -1,0 +1,197 @@
+<link rel="stylesheet" href="css/donor_search.css">
+<style>
+    .image-logo {
+        top: 0;
+        margin-top: -33.4414vh;
+        width: 40vw;
+        height: auto;
+        margin-left: 29.5vw;
+    }
+    .left-top {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 1vh;
+        left: 15vw;
+        transform: translate(-10vw, 0vh);
+        font-weight: 500;
+        font-size: 4vw;
+    }
+
+    .h-v60 {
+        height: 60vh;
+    }
+</style>
+
+<div style="padding-left: 0px;" class="sticky-top container-fluid">
+
+    <div class="h-100 d-flex align-items-center sticky-top">
+        <img src="images/layout-red.png" style="width: 101vw; height: 30vh;" alt="">
+
+        <div onclick="load_page('home')" class="left-top">
+            <i class="fas fa-chevron-left fa-1x"></i>
+        </div>
+
+    </div>
+    <div class="h-100 d-flex align-items-center sticky-top">
+        <img src="images/logo.png" class="image-logo" alt="">
+    </div>
+
+
+</div>
+<div class="container-fluid overflow-auto h-v60 p-t-20">
+
+    <div class="blood-type-head">
+        <span>
+            <i class="fas fa-tint text-danger fa-1x"></i>
+        </span>
+        <span style="font-weight: 500;">
+            Blood Type
+        </span>
+    </div>
+
+
+
+
+    <div class="row blood-type-list text-center d-flex align-items-center">
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="a_p">
+                        A+
+                    </label>
+                    <input type="radio" name="blood_type" id="a_p" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="a_n">
+                        A-
+                    </label>
+                    <input type="radio" name="blood_type" id="a_n" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="b_p">
+                        B+
+                    </label>
+                    <input type="radio" name="blood_type" id="b_p" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="b_n">
+                        B-
+                    </label>
+                    <input type="radio" name="blood_type" id="b_n" style="display: none;">
+                </span>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="blood-list-hidden">
+        <div class="row blood-type-list text-center d-flex align-items-center">
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle red-border">
+                        <label for="o_p">
+                            O+
+                        </label>
+                        <input type="radio" name="blood_type" id="o_p" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle red-border">
+                        <label for="o_n">
+                            O-
+                        </label>
+                        <input type="radio" name="blood_type" id="o_n" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle blood-2 red-border">
+                        <label for="ab_p">
+                            AB+
+                        </label>
+                        <input type="radio" name="blood_type" id="ab_p" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle blood-2 red-border">
+                        <label for="ab_n">
+                            AB-
+                        </label>
+                        <input type="radio" name="blood_type" id="ab_n" style="display: none;">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-end ">
+        <span onclick="toggle_blood_type()" class="more-details">
+            More Details >>
+        </span>
+    </div>
+
+
+    <div class="search-field">
+        <input type="text" name="district" id="district" class="search-filed-input form-control" placeholder="District">
+    </div>
+
+    <div class="search-field">
+        <input type="text" name="pincode" id="pincode" class="search-filed-input form-control" placeholder="Pincode">
+    </div>
+
+    <div class="search-field text-center">
+        <button class="form-control btn btn-danger search-button">Search Donor <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $(".cicle-white").on("click", function () {
+            $('input:radio').each(function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "white",
+                        "background-color": "red",
+                    });
+                } else {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "#ff0000",
+                        "background-color": "white",
+                    });
+                }
+            });
+        });
+    });
+
+    function toggle_blood_type() {
+        $(".blood-list-hidden").toggle("slow");
+    }
+
+
+</script>

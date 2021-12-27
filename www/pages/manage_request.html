@@ -1,0 +1,296 @@
+<link rel="stylesheet" href="css/manage_request.css">
+
+
+
+<style>
+    .w-40-px {
+        width: 40px;
+    }
+
+    ul {
+        height: 2rem;
+        width: 100%;
+    }
+
+    li {
+
+        width: 40px;
+        display: inline;
+    }
+
+    .call-list {
+        height: 20px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .call-option {
+        padding-top: 20px;
+    }
+
+    .call-btn {
+        color: white;
+        padding: 10px 30px;
+        /* padding-left: 30px;
+        padding-right: 30px; */
+        /* padding-top: 10px;
+        padding-bottom:10px; */
+    }
+
+    .call-circle {
+
+        border: 3px white solid;
+        border-radius: 50%;
+        height: 30px;
+        padding: 10px;
+        width: 30px;
+        margin-left: -15px;
+    }
+
+    .call-circle i {
+        /* width: 20px; */
+        font-size: 18px;
+        color: white;
+    }
+
+    table tr td {
+        font-weight: 800 !important;
+    }
+
+    table th {
+        font-weight: 200 !important;
+    }
+
+    .modal-content {
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        border-radius: 5px !important;
+    }
+    .request-status{
+        color: #C20101;
+    }
+    .btn-danger{
+        background-color: #C20101 !important;
+        color: white;
+    }
+</style>
+
+<div class="sticky-top container-fluid h20">
+    <div class="h-100 d-flex align-items-center">
+        <i onclick="load_page('home')" class="fas fa-chevron-left fa-1x"></i>
+    </div>
+</div>
+
+
+<div class="container-fluid p-bt-5">
+    <span class="f-v7 fw-600">Manage Request</span>
+</div>
+
+<div class="container-fluid overflow-auto h-v100 p-b-v20 ">
+
+    <div class="list-request">
+        <div class="container-fluid shadow shadow-4 b-rad-2 ">
+            <div class="p-10">
+                <div class="row p-10 ">
+                    <div class="col">
+                        <div class="container-fluid text-black-50 patient-name ">
+                            Arun
+                        </div>
+                        <div class="container-fluid text-black patient-unit-distance">
+                            1 Unit . <span class="patient-hospital">KMCH Erode</span>
+                        </div>
+                        <div class="container-fluid p-t-20">
+                            <span onclick="modal_toggle('manage_request_modal')" class="more-details">
+                                More Details >>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-4 request-status d-flex align-items-center justify-content-center ">
+                        <i class="far fa-check-circle fa-3x"></i>
+                    </div>
+                </div>
+                <div class="row question-span">
+                    <div class="col-12">
+                        <div>
+                            Did you get blood?
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="p-10 row">
+                    <div class="col-3 h50">
+                        <span class="shadow-custom cicle-white">
+                            <span class="inner-cicle yes-pad red-border">
+                                <label for="yes">
+                                    Yes
+                                </label>
+                                <input type="radio" name="blood_response" id="yes" style="display: none;">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-3 h50">
+                        <span class="shadow-custom cicle-white">
+                            <span class="inner-cicle red-border">
+                                <label for="no">
+                                    No
+                                </label>
+                                <input type="radio" name="blood_response" id="no" style="display: none;">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="list-request">
+        <div class="container-fluid shadow shadow-4 b-rad-2 ">
+            <div class="p-10">
+                <div class="row p-10 b-rad-2">
+                    <div class="col">
+                        <div class="container-fluid text-black-50 patient-name ">
+                            Sivakumar
+                        </div>
+                        <div class="container-fluid text-black patient-unit-distance">
+                            3 Unit . <span class="patient-hospital">GH Erode</span>
+                        </div>
+                        <div class="container-fluid">
+                            <span onclick="modal_toggle('manage_request_modal')" class="more-details">
+                                More Details >>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-4 request-status d-flex align-items-center justify-content-center ">
+                        <i class="fas fa-exclamation-triangle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-request">
+        <div class="container-fluid shadow shadow-4 b-rad-2 ">
+            <div class="p-10">
+                <div class="row p-10 b-rad-2">
+                    <div class="col">
+                        <div class="container-fluid text-black-50 patient-name ">
+                            Sivakumar
+                        </div>
+                        <div class="container-fluid text-black patient-unit-distance">
+                            3 Unit . <span class="patient-hospital">GH Erode</span>
+                        </div>
+                        <div class="container-fluid">
+                            <span onclick="modal_toggle('manage_request_modal')" class="more-details">
+                                More Details >>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-4 request-status d-flex align-items-center justify-content-center ">
+                        <i class="fas fa-exclamation-triangle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="fixed-bottom text-right">
+    <div class="p-r-20">
+        <button class="done-button btn btn-danger ">Done</button>
+    </div>
+</div>
+<!-- <div class="d-flex align-items-end">...</div> -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="manage_request_modal" tabindex="-1" aria-labelledby="manage_request_modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content b-rad-4">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-2">
+                            <!-- <i class="fas fa-tint text-danger fa-3x"></i> -->
+                            <img src="images/b_a_n.png" class="w-40-px" alt="">
+                        </div>
+                        <div class="col">
+                            <table class="request_table">
+                                <tr>
+                                    <th style="vertical-align:top">Patient Name</th>
+                                    <td>:</td>
+                                    <td>Arun</td>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align:top">Blood Needed</th>
+                                    <td>:</td>
+                                    <td>1 Unit</td>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align:top">Problem</th>
+                                    <td>:</td>
+                                    <td>Operation</td>
+                                </tr>
+                                <tr>
+                                    <th style="vertical-align:top">Location</th>
+                                    <td>:</td>
+                                    <td>KMCH, Nethaji Road, Near perundurai, Erode - 638004</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="call-option text-center ">
+                        <ul>
+                            <li class="bg-danger call-list shadow">
+                                <span class="call-btn">
+                                    More Details
+                                </span>
+                            </li>
+                            <li class="shadow">
+                                <span class="call-circle bg-danger">
+                                    <!-- <img src="icons/i-4.png" alt=""> -->
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".cicle-white").on("click", function () {
+            $('input:radio').each(function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "white",
+                        "background-color": "red",
+                    });
+                } else {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "#ff0000",
+                        "background-color": "white",
+                    });
+                }
+            });
+        });
+    });
+
+</script>

@@ -1,0 +1,236 @@
+<link rel="stylesheet" href="css/donation_list.css">
+<div class="sticky-top container-fluid h20">
+    <div class="h-100 d-flex align-items-center">
+        <i onclick="load_page('home')" class="fas fa-chevron-left fa-1x"></i>
+    </div>
+</div>
+
+<style>
+    .w-40-px{
+        width: 40px;
+    }
+    ul {
+        height: 2rem;
+        width: 100%;
+    }
+
+    li {
+
+        width: 40px;
+        display: inline;
+    }
+
+    .call-list {
+        height: 20px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .call-option {
+        padding-top: 20px;
+    }
+
+    .call-btn {
+        color: white;
+        padding: 10px 30px;
+        /* padding-left: 30px;
+        padding-right: 30px; */
+        /* padding-top: 10px;
+        padding-bottom:10px; */
+    }
+
+    .call-circle {
+
+        border: 3px white solid;
+        border-radius: 50%;
+        height: 30px;
+        padding: 10px;
+        width: 30px;
+        margin-left: -15px;
+    }
+
+    .call-circle i {
+        /* width: 20px; */
+        font-size: 18px;
+        color: white;
+    }
+
+    table tr td {
+        font-weight: 800 !important;
+    }
+
+    table th {
+        font-weight: 200 !important;
+    }
+
+    .modal-content {
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        border-radius: 5px !important;
+    }
+</style>
+<div class="container-fluid p-bt-5">
+    <span class="f-v7 fw-600"> Donation Needed</span>
+</div>
+
+<div class="container-fluid overflow-auto h-v100 p-b-v20 ">
+
+    <div onclick="modal_toggle('donation_details_modal')" class="container-fluid list-request">
+        <div class="p-10">
+            <div class="row p-10 shadow shadow-4 b-rad-2">
+                <div class="col-1">
+                    <!-- <i class="fas fa-tint text-danger fa-3x"></i> -->
+                    <img src="images/b_a_p.png" class="w-40-px" alt="">
+                </div>
+                <div class="col">
+                    <div class="container-fluid text-black-50 patient-name">
+                        Arun
+                    </div>
+                    <div class="container-fluid text-black patient-unit-distance">
+                        1 Unit.
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                    <span class="time-requested-ago text-black-50">2 hours ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div onclick="modal_toggle('donation_details_modal')" class="container-fluid list-request">
+        <div class="p-10">
+            <div class="row p-10 shadow shadow-4 b-rad-2">
+                <div class="col-1">
+                    <!-- <i class="fas fa-tint text-danger fa-3x"></i> -->
+                    <img src="images/b_o_p.png" class="w-40-px" alt="">
+                </div>
+                <div class="col">
+                    <div class="container-fluid text-black-50 patient-name">
+                        Vin Diesel
+                    </div>
+                    <div class="container-fluid text-black patient-unit-distance">
+                        10 Unit.
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                    <span class="time-requested-ago text-black-50">10 second ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div onclick="modal_toggle('donation_details_modal')" class="container-fluid list-request">
+        <div class="p-10">
+            <div class="row p-10 shadow shadow-4 b-rad-2">
+                <div class="col-1">
+                    <!-- <i class="fas fa-tint text-danger fa-3x"></i> -->
+                    <img src="images/b_a_n.png" class="w-40-px" alt="">
+                </div>
+                <div class="col">
+                    <div class="container-fluid text-black-50 patient-name">
+                        Robert Downey Jr
+                    </div>
+                    <div class="container-fluid text-black patient-unit-distance">
+                        3 Unit.
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                    <span class="time-requested-ago text-black-50">12 hours ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+<!-- Modal -->
+    <div class="modal fade" id="donation_details_modal" tabindex="-1" aria-labelledby="donation_details_modal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content b-rad-4">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="donation_details_modal">Modal title</h5>
+                    <button type="button" class="btn-close"  aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2">
+                                <!-- <i class="fas fa-tint text-danger fa-3x"></i> -->
+                                <img src="images/b_a_n.png" class="w-40-px" alt="">
+                            </div>
+                            <div class="col">
+                                <table class="request_table">
+                                    <tr>
+                                        <th style="vertical-align:top">Patient Name</th>
+                                        <td>:</td>
+                                        <td>Arun</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="vertical-align:top">Blood Needed</th>
+                                        <td>:</td>
+                                        <td>1 Unit</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="vertical-align:top">Problem</th>
+                                        <td>:</td>
+                                        <td>Operation</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="vertical-align:top">Location</th>
+                                        <td>:</td>
+                                        <td>KMCH, Nethaji Road, Near perundurai, Erode - 638004</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="call-option text-center ">
+                            <ul>
+                                <li class="bg-danger call-list shadow">
+                                    <span class="call-btn">
+                                        More Details
+                                    </span>
+                                </li>
+                                <li class="shadow">
+                                    <span class="call-circle bg-danger">
+                                        <!-- <img src="icons/i-4.png" alt=""> -->
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- <div class="call-option text-center" >
+                            <div class="row bg-danger">
+                                <div class="col">Call</div>
+                                <div class="col-3">
+                                    <span class="call-circle"> <img src="icons/i-4.png" alt=""> </span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="call-option text-center" >
+                            <button class="btn " style="padding: 5px;">
+                                <span class="bg-danger" style="padding: 5px;"></span>
+                                    More Details <span class="call-circle"> <img src="icons/i-4.png" alt=""> </span>
+                                </span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+

@@ -1,0 +1,252 @@
+<link rel="stylesheet" href="css/signup_donor.css">
+
+<div class="sticky-top container-fluid h20 bg-white" style="padding-left: 0px; width: 100vw !important;">
+    <div style="width: 100vw !important;" class="h-100 d-flex align-items-center sticky-top">
+        <img src="icons/c-2.png " style="width: 101vw; height: 40vh;" alt="">
+
+        <div class="centered text-white">
+            Become a Blood Donor
+            <div style="font-size: 3vw; font-weight: normal;">
+                Fill the below details accurately to help you better
+            </div>
+        </div>
+        <div onclick="load_page('login')" class="left-top">
+            <i class="fas fa-chevron-left fa-1x"></i>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid overflow-auto h-v50 p-b-v20 ">
+    <div class="row blood-type-list text-center d-flex align-items-center">
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="a_p">
+                        A+
+                    </label>
+                    <input type="radio" name="blood_type" id="a_p" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="a_n">
+                        A-
+                    </label>
+                    <input type="radio" name="blood_type" id="a_n" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="b_p">
+                        B+
+                    </label>
+                    <input type="radio" name="blood_type" id="b_p" style="display: none;">
+                </span>
+            </span>
+        </div>
+        <div class="col-3 h50">
+            <span class="shadow-custom cicle-white">
+                <span class="inner-cicle red-border">
+                    <label for="b_n">
+                        B-
+                    </label>
+                    <input type="radio" name="blood_type" id="b_n" style="display: none;">
+                </span>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="blood-list-hidden">
+        <div class="row blood-type-list text-center d-flex align-items-center">
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle red-border">
+                        <label for="o_p">
+                            O+
+                        </label>
+                        <input type="radio" name="blood_type" id="o_p" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle red-border">
+                        <label for="o_n">
+                            O-
+                        </label>
+                        <input type="radio" name="blood_type" id="o_n" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle blood-2 red-border">
+                        <label for="ab_p">
+                            AB+
+                        </label>
+                        <input type="radio" name="blood_type" id="ab_p" style="display: none;">
+                    </span>
+                </span>
+            </div>
+            <div class="col-3 h50">
+                <span class="shadow-custom cicle-white">
+                    <span class="inner-cicle blood-2 red-border">
+                        <label for="ab_n">
+                            AB-
+                        </label>
+                        <input type="radio" name="blood_type" id="ab_n" style="display: none;">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-end ">
+        <span onclick="toggle_blood_type()" class="more-details">
+            More Details >>
+        </span>
+    </div>
+
+    <div class="container blood-type-head">
+        <span>
+            <i class="fas fa-tint text-danger fa-1x"></i>
+            <!-- <i class="fas fa-home text-danger fa-1x"></i> -->
+        </span>
+        <span style="font-weight: 500;">
+            How Often would you like to donate ?
+        </span>
+    </div>
+
+    <div class="container periodic">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-3 period-type text-center d-flex align-items-center">
+                <div class="period-border">
+                    <label for="m_3">
+                        3 Months
+                    </label>
+                    <input type="radio" name="periodic_time" id="m_3" style="display: none;">
+                </div>
+            </div>
+            <div class="col-3 period-type text-center">
+                <div class="period-border">
+                    <label for="m_4">
+                        4 Months
+                    </label>
+                    <input type="radio" name="periodic_time" id="m_4" style="display: none;">
+                </div>
+            </div>
+            <div class="col-3 period-type text-center">
+                <div class="period-border">
+                    <label for="m_5">
+                        5 Months
+                    </label>
+                    <input type="radio" name="periodic_time" id="m_5" style="display: none;">
+                </div>
+            </div>
+            <div class="col-3 period-type text-center">
+                <div class="period-border">
+                    <label for="m_6">
+                        6 Months
+                    </label>
+                    <input type="radio" name="periodic_time" id="m_6" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-t-20 blood-type-head">
+        <span>
+            <!-- <i class="fas fa-tint text-danger fa-1x"></i> -->
+            <i class="fas fa-home text-danger fa-1x"></i>
+        </span>
+        <span style="font-weight: 500;">
+            Location
+        </span>
+    </div>
+
+    <div class="container input-field">
+        <div class="row">
+            <div class="col-12">
+                <input type="text" placeholder="Address" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <input type="text" placeholder="Area" class="form-control">
+            </div>
+            <div class="col-2"></div>
+            <div class="col-6">
+                <input type="text" placeholder="District" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <input type="text" placeholder="State" class="form-control">
+            </div>
+            <div class="col-2"></div>
+            <div class="col-6">
+                <input type="text" placeholder="Pincode" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-t-20 d-flex justify-content-center ">
+        <button onclick="load_page('home')" class="btn btn-danger register-btn">Register</button>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".period-type").on("click", function () {
+
+            $('input[name="periodic_time"]').each(function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "white",
+                        "background-color": "red",
+                    });
+                } else {
+                    $(this).parent().css({
+                        "border": "solid #666666 1px",
+                        "color": "#666666",
+                        "background-color": "white",
+                    });
+                }
+            });
+
+        });
+
+
+        $(".cicle-white").on("click", function () {
+            $('input[name="blood_type"]').each(function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "white",
+                        "background-color": "red",
+                    });
+                } else {
+                    $(this).parent().css({
+                        "border": "solid #ff0000 1px",
+                        "color": "#ff0000",
+                        "background-color": "white",
+                    });
+                }
+            });
+        });
+    });
+
+    function toggle_blood_type() {
+        $(".blood-list-hidden").toggle("slow");
+    }
+
+
+</script>

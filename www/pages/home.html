@@ -1,0 +1,222 @@
+<link rel="stylesheet" href="css/home.css">
+
+<style>
+    @media only screen and (min-width: 370px) {
+        .layout-div {
+            margin-top: -0.7vh;
+        }
+    }
+
+    .bg-danger {
+        background-color: #C20101 !important;
+    }
+
+    .layout-div {
+        padding-left: 0px;
+        margin-top: 5px;
+    }
+
+    .home_icons {
+        margin-bottom: 24px;
+    }
+
+    .bg-danger {
+        background-color: #C20101 !important;
+    }
+
+    body {
+        background-color: white !important;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 4vh;
+        left: 6vw;
+        transform: translate(0vw, 0vh);
+        font-weight: 500;
+        font-size: 5vw;
+    }
+
+    .right-top {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 1vh;
+        /* left: 0vw; */
+        right: 6vw;
+        transform: translate(0vw, 0vh);
+        font-weight: 500;
+        font-size: 4vw;
+    }
+
+    ul {
+        height: 50px;
+        width: 100%;
+    }
+
+    li {
+        /* width: 50px; */
+        display: inline;
+        /* margin-left: -87%; */
+    }
+
+    .menu-list {
+        height: 50px;
+        padding: 5px 10vw;
+        width: 50vw;
+        word-break: normal;
+        border-radius: 5px;
+    }
+
+    .menu-option {
+        /* padding-top: 20px; */
+        margin: 0 auto;
+    }
+
+    .menu-btn {
+        font-weight: 600;
+        color: black;
+        padding: 10px 5vw 10px 5vw;
+        /* padding: 10px 30px; */
+        /* padding-left: 30px;
+        padding-right: 30px; */
+        /* padding-top: 10px;
+        padding-bottom:10px; */
+    }
+
+    .menu-circle {
+
+        border: 3px rgb(255, 0, 0) solid;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        padding: 20px 10px;
+        /* margin-left: -15px; */
+    }
+
+    .menu-circle i {
+        /* width: 20px; */
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+    }
+
+    .shadow-custom {
+        box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.37);
+        -webkit-box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.37);
+        -moz-box-shadow: 10px 10px 12px -3px rgba(0, 0, 0, 0.37);
+    }
+</style>
+
+<div style="padding-left: 0px; width: 100vw !important;" class="sticky-top container-fluid h20 bg-white ">
+    <div style="width: 100vw !important;" class="h-100 d-flex align-items-center sticky-top">
+        <img src="images/layout-red.png" style="width: 101vw; padding-top: 10vh; height: 40vh;" alt="">
+
+        <div class="centered text-white">
+            Hello, Alex
+        </div>
+        <div onclick="logout()" class="right-top">
+            <!-- <i class="fas fa-chevron-left fa-1x"></i> -->
+            <i class="fas fa-sign-out-alt fa-1x"></i>
+            <!-- Default switch -->
+            <!-- <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches">
+                <label class="custom-control-label" for="customSwitches">Availability</label>
+            </div> -->
+        </div>
+    </div>
+    <div class="h-100 d-flex align-items-center sticky-top">
+        <div class="image-logo">
+            <img src="icons/p3.png" class="" style="width: 25vw; padding-top: 15vh;" alt="">
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<div style=" padding-left: 3.25rem; padding-top: 25vh;right: 0;font-weight: 700;font-size: 15px; " class="container-fluid bg-white">
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="avail">
+        <label class="custom-control-label" for="avail">Availability</label>
+    </div>
+</div>
+<div style=" padding-bottom: 20vh;" class="container-fluid overflow-auto h-v100 p-b-v20 bg-white">
+
+    <div onclick="load_page('donor_search')" class="menu-option d-flex justify-content-center p-t-20">
+        <ul>
+
+            <li class="menu-img">
+                <span class="menu-circle bg-white">
+                    <img style="width: 40px;height: 40px;" src="icons/i-5.png">
+                </span>
+            </li>
+
+            <li class="bg-white menu-list shadow-custom">
+                <span class="menu-btn">
+                    Find a Doner
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </li>
+
+        </ul>
+    </div>
+    <div onclick="load_page('donation_list')" class="menu-option d-flex justify-content-center p-t-20">
+        <ul>
+
+            <li class="menu-img">
+                <span class="menu-circle bg-white">
+                    <img style="width: 40px;height: 40px;" src="icons/i-6.png">
+                </span>
+            </li>
+
+            <li class="bg-white menu-list shadow-custom">
+                <span class="menu-btn">
+                    Donation List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </li>
+
+        </ul>
+    </div>
+    <div onclick="load_page('manage_request')" class="menu-option d-flex justify-content-center p-t-20">
+        <ul>
+
+            <li class="menu-img">
+                <span class="menu-circle bg-white">
+                    <img style="width: 40px;height: 40px;" src="icons/i-8.png">
+                </span>
+            </li>
+
+            <li style="    padding-right: 9vw !important" class="bg-white menu-list shadow-custom">
+                <span class="menu-btn">
+                    Manage Request
+                    &nbsp;&nbsp;
+                </span>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div onclick="load_page('request')" class="menu-option d-flex justify-content-center p-t-20">
+        <ul>
+
+            <li class="menu-img">
+                <span class="menu-circle bg-white">
+                    <img style="width: 40px;height: 40px;" src="icons/i-7.png">
+                </span>
+            </li>
+
+            <li class="bg-white menu-list shadow-custom">
+                <span class="menu-btn">
+                    Request &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </li>
+
+        </ul>
+    </div>
+
+
+</div>
