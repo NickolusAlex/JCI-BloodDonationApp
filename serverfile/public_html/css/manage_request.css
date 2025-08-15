@@ -1,0 +1,118 @@
+.c-red{
+    background-color: aqua;
+}
+
+.h20{
+    height: 40px;
+}
+.h-v100{
+    height: 100vh;
+}
+.p-b-v20 {
+    padding-bottom: 40vh;
+}
+.p-bt-5{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.p-10{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.p-t-20{
+    padding-top: 20px;
+}
+.f-v6{
+    font-size: 6vw;
+}
+.f-v7{
+    font-size: 7vw;
+}
+.f-v8{
+    font-size: 8vw;
+}
+.fw-600{
+    font-weight: 600;
+}
+.time-requested-ago{
+    font-size: 3.3vw;   
+    font-weight: 500;
+}
+.patient-name{
+    font-size: 4.5vw;
+    font-weight: 700;
+}
+.patient-unit-distance{
+    font-size: 0.75rem;
+    font-weight: 600;
+    /* text-align: justify; */
+    word-spacing: 3px;
+}
+.b-rad-2{
+    border-radius: 2vw;
+}
+
+.request_table tr td {
+    vertical-align: top!important;
+}
+.b-rad-4{
+    border-radius: 4vw;
+}
+.more-details{
+    color: #ff0000;
+    font-weight: 400;
+    font-size: .75rem;
+}
+
+.cicle-white{
+    -webkit-border-radius: 50;
+    -moz-border-radius: 50;
+    border-radius: 50px;
+    color: #000000;
+    /* font-size: 14px; */
+    padding: 13px 3px;
+    border: solid #ffffff 3px;
+}
+
+.yes-pad{
+    padding: 10px 8px !important;
+}
+
+.inner-cicle{
+    -webkit-border-radius: 50;
+    -moz-border-radius: 50;
+    border-radius: 50px;
+    padding: 10px 10px;
+    font-weight: 1000;
+    width: 1rem;
+    height: 1rem;
+    max-width: 1rem;
+    max-height: 1rem;
+}
+
+.red-border{
+    border: solid #ff0000 1px;
+    color: #ff0000;
+    background-color: white;
+}
+
+.question-span{
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+
+.shadow-custom {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .25), 0 3px 15px 5px rgba(0, 0, 0, 0.05) !important;
+}
+.list-request{
+    padding-bottom: 20px;
+}
+.done-button{
+    width: max-content;
+    padding: 5px 10vw;
+    border-radius: 20px;
+}
+.p-r-20{
+    padding-right: 20px;
+}
